@@ -1,5 +1,5 @@
 # Crypto app
-
+this application is about showing the  Crypto currencies informations and news about it 
 # Package used into project
 
 <ul>
@@ -15,3 +15,4 @@
 to install them all correctly:
   
   <i>npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js html-react-parser millify moment react-chartjs-2 react-router-dom</i>
+
