@@ -15,7 +15,7 @@ function Navbar() {
       <div className="logo-container">
         <Avatar src={icon} size="large" />
         <Typography.Title level={2} className="logo">
-          <Link to={"/"}>Cryto app</Link>
+          <Link to={"/"}>Crypto app</Link>
         </Typography.Title>
         {/* <Button className="menu-control-container"></Button> */}
       </div>
@@ -26,9 +26,9 @@ function Navbar() {
         <Menu.Item icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Crytpocurrencies</Link>
         </Menu.Item>
-        <Menu.Item icon={<MoneyCollectOutlined />}>
+        {/* <Menu.Item icon={<MoneyCollectOutlined />}>
           <Link to="/exchanges">Exchanges</Link>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item icon={<BulbOutlined />}>
           <Link to="/news">News</Link>
         </Menu.Item>
