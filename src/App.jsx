@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 import {
   Navbar,
-  Exchanges,
+
   HomePage,
   Cryptocurrencies,
   News,
@@ -21,7 +21,7 @@ function App() {
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<HomePage />} />
-              <Route exact path="/exchanges" element={<Exchanges />} />
+              
               <Route
                 exact
                 path="/cryptocurrencies"

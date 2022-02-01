@@ -48,9 +48,9 @@ function Cryptocurrencies({ simplified }) {
             small={12}
             lg={6}
             className="crypto-card"
-            key={currency.id}
+            key={currency.uuid}
           >
-            <Link to={`/crypto/${currency.id}`}>
+            <Link to={`/crypto/${currency.uuid}`} key={currency.uuid}>
               <Card
                 title={`${currency.rank}.${currency.name}`}
                 extra={
@@ -65,6 +65,7 @@ function Cryptocurrencies({ simplified }) {
                 <p>Price: {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
                 <p>Daily change: {millify(currency.change)}%</p>
+                <p>{currency.uuid }</p>
               </Card>
             </Link>
           </Col>

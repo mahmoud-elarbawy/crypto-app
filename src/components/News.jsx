@@ -1,4 +1,4 @@
-import React,{ useState} from "react";
+import React, { useState } from "react";
 import { Select, Typography, Avatar, Row, Col, Card } from "antd";
 import moment from "moment";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewApi";
@@ -10,7 +10,6 @@ const demoImage =
 
 function News({ simplified }) {
   const [newsCategory, setNewsCategory] = useState("Cryptocurrency");
-
   const { data: cryptoNews } = useGetCryptoNewsQuery({
     newsCategory: newsCategory,
     count: simplified ? 6 : 12,
@@ -29,17 +28,19 @@ function News({ simplified }) {
               className="select-news"
               placeholder="Select a Crypto"
               optionFilterProp="children"
-              onChange={setNewsCategory(value)}
+              onChange={(value) => setNewsCategory(value)}
               filterOption={(input, option) =>
                 option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
               }
             >
               <Option value="Crytpocurrency">Crytpocurrency</Option>
-              {data?.data?.coins.map(coins =><Option value={coin.name}>{coins.name}</Option>)}
+              {data?.data?.coins.map((coin) => (
+                <Option value={coin.name}>{coin.name}</Option>
+              ))}
             </Select>
           </Col>
         )}
-        {cryptoNews.value.map((news, i) => {
+        {cryptoNews.value.map((news, i) => (
           <Col xs={24} sm={12} lg={8} key={i}>
             <Card hoverable className={"news-card"}>
               <a href={news.url} target="_blank" rel="noreferrer ">
@@ -75,8 +76,8 @@ function News({ simplified }) {
                 </Text>
               </a>
             </Card>
-          </Col>;
-        })}
+          </Col>
+        ))}
       </Row>
     </>
   );
